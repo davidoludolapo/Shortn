@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/style.css" />
+  <title>Document</title>
+</head>
+<body>
+  <div class="url-cont">
+    <h1>Shortn</h1>
+    <form action="/shortUrls" method="POST">
+      <input required placeholder="Url" type="url" name="fullUrl" id="fullUrl" class="url-input">
+      <button class="shortn-button" type="submit">Shortn</button>
+    </form>
+    
+    <div>
+
+      <div>
+        <% shortUrls.forEach(shortUrl => { %>
+          
+            
+            <div class="todo-row"><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></div>
+    
+         
+        <% }) %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
